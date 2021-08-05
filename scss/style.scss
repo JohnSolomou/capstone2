@@ -1,3 +1,5 @@
+$primary-color: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +50,7 @@ body {
 }
 ul.news-list li {
   margin: 10px;
+  padding: 10px;
 }
 
 div.container-fluid.py-2 {
@@ -76,19 +79,20 @@ a.navbar-brand {
 }
 .newsdiv {
   color: white;
-  background-color: rgba(80, 140, 238, 0.5);
+  background-color: rgb(80, 140, 238);
   width: 300px;
   display: inline-block;
   margin: 0;
   border: 1px solid gray;
   box-shadow: 4px 10px #888888;
+  padding: 20px;
 }
 label,
 form.search {
   text-align: center;
 }
 .submit {
-  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  background: $primary-color;
   color: #fff;
 }
 div.row {
@@ -291,7 +295,7 @@ div.vid-container {
   border-radius: 15%;
 
   /* background-color: #f4f9ff; */
-  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  background: $primary-color;
 }
 
 .weather-icon img {
@@ -346,7 +350,7 @@ div.vid-container {
   color: aliceblue;
 } */
 button.btn {
-  background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  background: $primary-color;
   color: white;
   margin-left: 90px;
   justify-content: center;

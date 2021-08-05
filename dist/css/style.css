@@ -60,6 +60,7 @@ body {
 
 ul.news-list li {
   margin: 10px;
+  padding: 10px;
 }
 
 div.container-fluid.py-2 {
@@ -91,13 +92,14 @@ a.navbar-brand {
 
 .newsdiv {
   color: white;
-  background-color: rgba(80, 140, 238, 0.5);
+  background-color: #508cee;
   width: 300px;
   display: inline-block;
   margin: 0;
   border: 1px solid gray;
   -webkit-box-shadow: 4px 10px #888888;
           box-shadow: 4px 10px #888888;
+  padding: 20px;
 }
 
 label,
