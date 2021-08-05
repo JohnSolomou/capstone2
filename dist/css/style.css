@@ -1,0 +1,472 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rimouski";
+  list-style: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* navbar */
+.navbar {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 150, 163, 0.7)), to(rgba(48, 62, 143, 0.7)));
+  background: linear-gradient(rgba(47, 150, 163, 0.7), rgba(48, 62, 143, 0.7));
+}
+
+.logo {
+  font-family: "Aladin", cursive;
+  color: yellow;
+  font-size: 36px;
+}
+
+#tags {
+  margin-bottom: 200px;
+}
+
+.fas {
+  height: 30px;
+}
+
+.ui-menu-item div.ui-state-active {
+  /* border: 2px solid blue; */
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.carousel-item {
+  height: 300px;
+}
+
+.item img {
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+}
+
+ul.news-list li {
+  margin: 10px;
+}
+
+div.container-fluid.py-2 {
+  height: 100px;
+  color: black;
+  border-bottom: 2px solids blue;
+}
+
+a.navbar-brand {
+  margin-bottom: 300px;
+}
+
+.container {
+  /* background-color: #fff; */
+  margin: 150px auto;
+  border-radius: 20px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+/* search results */
+.newsimg {
+  width: 200px;
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.newsdiv {
+  color: white;
+  background-color: rgba(80, 140, 238, 0.5);
+  width: 300px;
+  display: inline-block;
+  margin: 0;
+  border: 1px solid gray;
+  -webkit-box-shadow: 4px 10px #888888;
+          box-shadow: 4px 10px #888888;
+}
+
+label,
+form.search {
+  text-align: center;
+}
+
+.submit {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: linear-gradient(#2f96a3, #303e8f);
+  color: #fff;
+}
+
+div.row {
+  margin: 0;
+}
+
+div.container {
+  padding-right: 0;
+  position: relative;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 150px;
+}
+
+footer p {
+  color: blue;
+}
+
+/* meditation app */
+div.app {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  /* background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143)); */
+  z-index: -5;
+  /* margin-left: auto;
+  margin-right: auto; */
+}
+
+h3.time-display {
+  height: 30px;
+  width: 50px;
+}
+
+img.play {
+  width: 30px;
+  height: 30px;
+}
+
+.app {
+  /* margin-left: auto;
+  margin-right: auto; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.time-select,
+.sound-picker,
+.player-container {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player-container {
+  position: relative;
+}
+
+.player-container svg {
+  position: absolute;
+  height: 25%;
+  top: 25%;
+  left: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.time-display {
+  margin-bottom: 20px;
+  position: absolute;
+  bottom: 0%;
+  color: white;
+  font-size: 20px;
+}
+
+video {
+  /* position: fixed; */
+  width: 250px;
+  height: 150px;
+  z-index: -1;
+}
+
+div.vid-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.time-select button,
+.sound-picker button {
+  color: gray;
+  width: 25%;
+  height: 10%;
+  background-color: white;
+  /* background: none; */
+  /* border: 2px solid white; */
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 10px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.time-select button:hover {
+  color: black;
+  background: white;
+}
+
+.sound-picker button {
+  border: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding: 15px;
+}
+
+.sound-picker button:nth-child(1) {
+  background: #4972a1;
+}
+
+.sound-picker button:nth-child(2) {
+  background: yellow;
+}
+
+.sound-picker button img {
+  height: 100%;
+}
+
+@media (max-width: 760px) {
+  a.navbar-brand {
+    margin-right: 300px;
+  }
+  div.container-fluid.py-2 {
+    height: 40px;
+  }
+  #btn {
+    margin-left: 90px;
+  }
+  #container {
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    color: blue;
+  }
+  ul.news-list.grid-container {
+    display: block;
+    padding: 0;
+    padding-left: 15px;
+  }
+  .grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+  }
+  div.container {
+    margin: 0;
+    padding: 0;
+  }
+  .carousel-item {
+    height: 100px;
+  }
+  .sound-picker button {
+    border: none;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    padding: 15px;
+  }
+}
+
+/* weather app  */
+.app-title {
+  border-radius: 10px 10px 0 0;
+}
+
+.app-title p {
+  text-align: center;
+  padding: 15px;
+  margin: 0 auto;
+  font-size: 1.2em;
+  /* color: #293251; */
+  color: #fff;
+}
+
+.notification {
+  background-color: #d45762;
+  display: none;
+}
+
+.notification p {
+  color: #fff;
+  font-size: 1.2em;
+  margin: 0;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.weather-container {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15%;
+  /* background-color: #f4f9ff; */
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: linear-gradient(#2f96a3, #303e8f);
+}
+
+.weather-icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.temperature-value {
+  width: auto;
+  height: 60px;
+  padding: 0;
+}
+
+.temperature-value p {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 4em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.temperature-value span {
+  color: #fff;
+  font-size: 0.5em;
+}
+
+.temperature-description {
+  padding-top: 20px;
+}
+
+.temperature-description p {
+  padding: 2px;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.location p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+/* #container {
+  height: 350px;
+  width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  color: aliceblue;
+} */
+button.btn {
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: linear-gradient(#2f96a3, #303e8f);
+  color: white;
+  margin-left: 90px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.news-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(209, 179, 139, 0.267);
+}
+
+button#btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  border-radius: 10%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+  height: 300px;
+  width: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: linear-gradient(#2f96a3, #303e8f);
+}
+
+#output {
+  margin: 25px;
+  font-size: 16px;
+  color: white;
+}
+
+/* .sb-example-1 .search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.sb-example-1 .searchTerm {
+  width: 100%;
+  border: 3px solid #00b4cc;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9dbfaf;
+}
+.sb-example-1 .searchTerm:focus {
+  color: #00b4cc;
+}
+.sb-example-1 .searchButton {
+  width: 40px;
+  height: 50px;
+  border: 1px solid #00b4cc;
+  background: #00b4cc;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+} */
+/*# sourceMappingURL=style.css.map */

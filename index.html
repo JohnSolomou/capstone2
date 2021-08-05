@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News & Weather</title>
+  
+    <link rel="stylesheet" href="dist/css/style.css">
+    <link rel="stylesheet" href="font/Rimouski.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  </head>
+  <body>
+    </div>
+
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-fluid py-2 "><p class= "logo">SunUpMotivate</p> 
+        <a href="#intro" class="navbar-brand">
+          <span class="nav fw-bold text-secondary"> </span>
+        </a>
+
+        <div class="justify-content-end align-center" id="main-nav">
+          <ul class="navbar-nav"></ul>
+        </div>
+      </div>
+    </nav>
+
+
+            <!-- search bar -->
+    <div class="row">
+      <div class="news col-sm-1 col-md-10 col-lg-10 col-xl-10">
+        <div class="container ">
+          <div class="">
+            <form class="search " action="">
+              <h2>Get the Latest News here</h2>
+              <label class="text-primary" for=""
+                >Search News 
+              <input class="input" id="tags" placeholder="" type="text" /><i class="fas fa-search"></i
+                ></label>
+              <input type="submit" class="submit" />
+            </form>
+          </div>
+            <!-- search results -->
+          <ul class="news-list grid-container"></ul>
+        </div>
+      </div>
+      
+              <!-- random quote generator -->
+      <div class="container grade col-md-4 col-lg-4 col-xl-2 my-5">
+        <button id="btn">
+          <p id="output">press for a quote!</p>
+        </button>
+         <!-- meditation app -->
+      <div class="app ">
+        <div class="vid-container">
+          <video loop>
+            <source src="./video/rain.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="time-select">
+          <button data-time = "120">2 min</button>
+          <button data-time = "300">5 min</button>
+          <button data-time = "600">10 min</button>
+        </div>
+        <div class="player-container">
+          <audio class="song">
+            <source src ="./sounds/rain.mp3">
+          </audio>
+          <img src="./svg/play.svg" alt="play" class="play">
+          <svg class= "track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+            </svg>
+            <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+              </svg>
+              <h3 class="time-display">0:00</h3>
+        </div>
+        <div class="sound-picker">
+          <button data-sound ="./sounds/rain.mp3"><img src="./svg/rain.svg" alt="rain"></button>
+          <button data-sound ="./sounds/beach.mp3"><img src="./svg/beach.svg" alt="rain"></button>
+          
+        </div>
+      </div>
+
+              <!-- Weather widget api -->
+        <div class="notification"></div>
+        <div class="weather-container">
+          <div class="app-title">
+            <p>Weather</p>
+          </div>
+
+          <div class="weather-icon">
+            <img src="icons/unknown.png" alt="" />
+          </div>
+
+          <div class="temperature-value">
+            <p>- °<span>C</span></p>
+          </div>
+          <div class="temperature-description"><p>-</p></div>
+          <div class="location"><p>-</p></div>
+        </div>
+      </div>
+    </div>
+  
+
+   
+
+    <footer>
+      <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img
+            src="img/leafar-perez-c85ks_wLI1U-unsplash.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="img/beach.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img
+            src="img/egor-myznik-Mg0FIHLJ5sE-unsplash.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="img/seychelles.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <p>&copy 2021 created by John Solomou</p>
+    </footer>
+
+    <script src="js/bootstrap.js"></script>
+    <script src="app.js"></script>
+  
+  </body>
+</html>
+      <!-- <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button> -->
+       <!-- toggle button for mobile nav  -->
+        <!-- <button
+          class="navbar-toggler btn-warning"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="toggle navigation"
+        >
+          <span class=""></span>
+        </button> -->
+        <!-- sample search bar -->
+            <!-- <div class="sb-example-1">
+      <div class="search">
+         <input type="text" class="searchTerm" id="tags" placeholder="What are you looking for?">
+         <button type="submit" class="searchButton">
+           <i class="fa fa-search"></i>
+        </button>
+      </div>
+   </div> -->
