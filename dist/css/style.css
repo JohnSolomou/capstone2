@@ -12,14 +12,9 @@ body {
 }
 
 /* navbar */
-.navbar {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 150, 163, 0.7)), to(rgba(48, 62, 143, 0.7)));
-  background: linear-gradient(rgba(47, 150, 163, 0.7), rgba(48, 62, 143, 0.7));
-}
-
 .logo {
   font-family: "Aladin", cursive;
-  color: yellow;
+  color: black;
   font-size: 36px;
 }
 
@@ -54,8 +49,8 @@ body {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
 }
 
 ul.news-list li {
@@ -88,6 +83,7 @@ a.navbar-brand {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  border-radius: %;
 }
 
 .newsdiv {
@@ -100,6 +96,7 @@ a.navbar-brand {
   -webkit-box-shadow: 4px 10px #888888;
           box-shadow: 4px 10px #888888;
   padding: 20px;
+  border-radius: %;
 }
 
 label,
@@ -415,7 +412,6 @@ button.btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: rgba(209, 179, 139, 0.267);
 }
 
 button#btn {

@@ -13,11 +13,10 @@ body {
 }
 /* navbar */
 .navbar {
-  background: linear-gradient(rgba(47, 150, 163, 0.7), rgba(48, 62, 143, 0.7));
 }
 .logo {
   font-family: "Aladin", cursive;
-  color: yellow;
+  color: black;
   font-size: 36px;
 }
 #tags {
@@ -46,7 +45,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
 }
 ul.news-list li {
   margin: 10px;
@@ -76,6 +75,7 @@ a.navbar-brand {
   margin-left: auto;
   margin-right: auto;
   display: block;
+  border-radius: %;
 }
 .newsdiv {
   color: white;
@@ -86,6 +86,7 @@ a.navbar-brand {
   border: 1px solid gray;
   box-shadow: 4px 10px #888888;
   padding: 20px;
+  border-radius: %;
 }
 label,
 form.search {
@@ -357,7 +358,6 @@ button.btn {
 }
 .news-list li {
   display: flex;
-  background-color: rgba(209, 179, 139, 0.267);
 }
 button#btn {
   display: flex;
