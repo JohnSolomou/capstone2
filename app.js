@@ -92,7 +92,7 @@ tempElement.addEventListener("click", function () {
 const searchForm = document.querySelector(".search");
 const input = document.querySelector(".input");
 const newsList = document.querySelector(".news-list");
-input.value = "world";
+input.value = "";
 searchForm.addEventListener("submit", retrieve);
 
 function retrieve(e) {
@@ -104,11 +104,12 @@ function retrieve(e) {
   newsList.innerHTML = "";
 
   e.preventDefault();
+  // news api 450dbfc1852a4e9898011cbcef5106ee
 
-  const apiKey = "450dbfc1852a4e9898011cbcef5106ee";
+  const apiKey = "9051922ae5d94903aa4c1ad16d25086d";
   let topic = input.value;
 
-  let url = `https://newsapi.org/v2/top-headlines?q=${topic}&apiKey=${apiKey}`;
+  let url = `https://api.spoonacular.com/recipes/complexSearch?query=${topic}&apiKey=${apiKey}&cuisine=&fillIngredients=false&addRecipeInformation=true&maxReadyTime=120&ignorePantry=flase&number=20&&sourceUrl=http://www.foodista.com`;
 
   fetch(url)
     .then((res) => {
@@ -116,7 +117,7 @@ function retrieve(e) {
     })
     .then((data) => {
       console.log(data);
-      data.articles.forEach((article) => {
+      data.results.forEach((results) => {
         let li = document.createElement("li");
         let a = document.createElement("a");
         let div = document.createElement("div");
@@ -130,16 +131,16 @@ function retrieve(e) {
         btn.className = "btn";
         // btn.style.color = "white";
         li.style.width = "300px";
-        a.setAttribute("href", article.url);
+        a.setAttribute("href", results.sourceUrl);
         a.setAttribute("target", "_blank");
-        img.setAttribute("src", article.urlToImage);
+        img.setAttribute("src", results.image);
 
-        div.textContent = article.title;
+        div.textContent = results.title;
         btn.prepend(br);
         div.appendChild(a);
         div.prepend(img);
         li.prepend(div);
-        btn.textContent = "Read More";
+        btn.textContent = "Get Recipe";
         div.appendChild(btn);
         a.appendChild(btn);
         newsList.appendChild(li);
@@ -321,20 +322,68 @@ const app = () => {
 };
 
 app();
+
+// import axios from "axios";
+
+// const options = {
+//   method: "POST",
+//   url: "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/products/classify",
+//   params: { locale: "en_us" },
+//   headers: {
+//     "content-type": "application/json",
+//     "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+//   },
+//   data: {
+//     plu_code: "",
+//     title: "Kroger Vitamin A & D Reduced Fat 2% Milk",
+//     upc: "",
+//   },
+// };
+
+// axios
+//   .request(options)
+//   .then(function (response) {
+//     console.log(response.data);
+//   })
+//   .catch(function (error) {
+//     console.error(error);
+//   });
+
+// fetch(
+//   "https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/food/products/classify?locale=en_us",
+//   {
+//     method: "POST",
+//     headers: {
+//       "content-type": "application/json",
+//       "x-rapidapi-host": "spoonacular-recipe-food-nutrition-v1.p.rapidapi.com",
+//     },
+//     body: {
+//       plu_code: "",
+//       title: "Kroger Vitamin A & D Reduced Fat 2% Milk",
+//       upc: "",
+//     },
+//   }
+// )
+//   .then((response) => {
+//     console.log(response);
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
 // post request
-fetch("https://jsonplaceholder.typicode.com/posts", {
-  method: "POST",
-  body: JSON.stringify({
-    kia: "telluride",
-    ford: "f-150",
-    porsche: "macan",
-  }),
-  headers: {
-    "Content-type": "application/json; charset=UTF-8",
-  },
-})
-  .then((response) => response.json())
-  .then((json) => console.log(json));
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+//   method: "POST",
+//   body: JSON.stringify({
+//     kia: "telluride",
+//     ford: "f-150",
+//     porsche: "macan",
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
 
 // $(document).ready(function () {
 //   $("button").click(function () {
