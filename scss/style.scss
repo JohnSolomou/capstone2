@@ -4,7 +4,7 @@ $primary-color: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Rimouski";
+  // font-family: "Rimouski";
   list-style: none;
 }
 
@@ -18,10 +18,11 @@ body {
   font-family: "Aladin", cursive;
   color: black;
   font-size: 36px;
+  width: 200px;
 }
-#tags {
-  margin-bottom: 200px;
-}
+// #tags {
+//   margin-bottom: ;
+// }
 .fas {
   height: 30px;
 }
@@ -45,7 +46,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
 }
 ul.news-list li {
   margin: 10px;
@@ -53,17 +54,22 @@ ul.news-list li {
 }
 
 div.container-fluid.py-2 {
-  height: 100px;
+  height: 200px;
   color: black;
   border-bottom: 2px solids blue;
 }
 a.navbar-brand {
   margin-bottom: 300px;
 }
+div.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .container {
   /* background-color: #fff; */
-  margin: 150px auto;
+  margin: 0;
   border-radius: 20px;
   padding-bottom: 0px;
   padding-top: 0px;
@@ -88,21 +94,28 @@ a.navbar-brand {
   padding: 20px;
   border-radius: %;
 }
+label p {
+  margin-bottom: 5px;
+  margin-right: 55px;
+}
+
 label,
 form.search {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .submit {
   background: $primary-color;
   color: #fff;
 }
-div.row {
-  margin: 0;
+.recipe {
 }
 
 div.container {
   padding-right: 0;
   position: relative;
+  display: inline;
 }
 
 footer {
@@ -114,7 +127,100 @@ footer {
 footer p {
   color: blue;
 }
+// carousel
+div.carousel-item.active {
+  height: 50%;
+}
+.carousel-control-prev,
+.carousel-item-next {
+  justify-content: space-between;
+}
 
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+// div.item {
+//   width: 50%;
+// }
+// div.row {
+//   // width: 50%;
+// }
+// div#MultiCarousel1.MultiCarousel {
+//   width: 25%;
+//   margin-left: 600px;
+// }
+// .MultiCarousel {
+//   float: left;
+//   overflow: hidden;
+//   padding: 15px;
+//   width: 100%;
+//   position: relative;
+// }
+
+// .MultiCarousel .MultiCarousel-inner {
+//   transition: 1s ease all;
+//   float: left;
+// }
+// .MultiCarousel .MultiCarousel-inner .item {
+//   float: left;
+// }
+// .MultiCarousel .MultiCarousel-inner .item > div {
+//   text-align: center;
+//   padding: 10px;
+//   margin: 10px;
+//   background: #f1f1f1;
+//   color: #666;
+// }
+// .MultiCarousel .leftLst,
+// .MultiCarousel .rightLst {
+//   position: absolute;
+//   border-radius: 50%;
+//   top: calc(50% - 20px);
+// }
+// .MultiCarousel .leftLst {
+//   left: 0;
+// }
+// .MultiCarousel .rightLst {
+//   right: 0;
+// }
+
+// .MultiCarousel .leftLst.over,
+// .MultiCarousel .rightLst.over {
+//   pointer-events: none;
+//   background: #ccc;
+// }
 /* meditation app */
 div.app {
   margin-top: 60px;
@@ -350,7 +456,7 @@ div.vid-container {
   text-align: center;
   color: aliceblue;
 } */
-button.btn {
+button.btns {
   background: $primary-color;
   color: white;
   margin-left: 90px;

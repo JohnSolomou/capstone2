@@ -96,10 +96,10 @@ input.value = "";
 searchForm.addEventListener("submit", retrieve);
 
 function retrieve(e) {
-  if (input.value == "") {
-    alert("Input field is empty! Please add a topic to search for. Thank You.");
-    return;
-  }
+  // if (input.value == "") {
+  //   alert("Input field is empty! Please add a topic to search for. Thank You.");
+  //   return;
+  // }
 
   newsList.innerHTML = "";
 
@@ -122,20 +122,20 @@ function retrieve(e) {
         let div = document.createElement("div");
         let img = document.createElement("img");
         let btn = document.createElement("button");
-        let br = document.createElement("br");
+        // let br = document.createElement("br");
 
         // styling
         div.className = "newsdiv";
         img.className = "newsimg";
-        btn.className = "btn";
-        // btn.style.color = "white";
+        btn.className = "btns";
+
         li.style.width = "300px";
         a.setAttribute("href", results.sourceUrl);
         a.setAttribute("target", "_blank");
         img.setAttribute("src", results.image);
 
         div.textContent = results.title;
-        btn.prepend(br);
+        // btn.prepend(br);
         div.appendChild(a);
         div.prepend(img);
         li.prepend(div);
@@ -149,42 +149,59 @@ function retrieve(e) {
       // });
     });
   // jquery for autocomplete
-  $(function () {
-    var availableTags = [
-      " African",
-      "American",
-      "British",
-      "Cajun",
-      "Caribbean",
-      "PChinese",
-      "REastern European",
-      "European",
-      "French",
-      "German",
-      "Greek",
-      "Indian",
-      "Irish",
-      "Italian",
-      "Japanese",
-      "Jewish",
-      "korean",
-      "Latin American",
-      "Mediterranean",
-      "Mexican",
-      "Middle Eastern",
-      "Nordic",
-      "Southern",
-      "Spanish",
-      "Thai",
-      "vietnamese",
-    ];
-
-    $("#tags").autocomplete({
-      source: availableTags,
-    });
-  });
 }
+$(function () {
+  var availableTags = [
+    " African",
+    "American",
+    "British",
+    "Cajun",
+    "Caribbean",
+    "PChinese",
+    "Eastern European",
+    "European",
+    "French",
+    "German",
+    "Greek",
+    "Indian",
+    "Irish",
+    "Italian",
+    "Japanese",
+    "Jewish",
+    "korean",
+    "Latin American",
+    "Mediterranean",
+    "Mexican",
+    "Middle Eastern",
+    "Nordic",
+    "Southern",
+    "Spanish",
+    "Thai",
+    "vietnamese",
+  ];
 
+  $("#tags").autocomplete({
+    source: availableTags,
+  });
+});
+// carousel javascript
+let items = document.querySelectorAll(".carousel .carousel-item");
+
+items.forEach((el) => {
+  const minPerSlide = 4;
+  let next = el.nextElementSibling;
+  for (var i = 1; i < minPerSlide; i++) {
+    if (!next) {
+      // wrap carousel by using first child
+      next = items[0];
+    }
+    let cloneChild = next.cloneNode(true);
+    el.appendChild(cloneChild.children[0]);
+    next = next.nextElementSibling;
+  }
+});
+
+// end of carousel
 // random quote generator
 // let btn = document.getElementById("btn");
 // let output = document.getElementById("output");

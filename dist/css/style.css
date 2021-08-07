@@ -3,7 +3,6 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Rimouski";
   list-style: none;
 }
 
@@ -16,10 +15,7 @@ body {
   font-family: "Aladin", cursive;
   color: black;
   font-size: 36px;
-}
-
-#tags {
-  margin-bottom: 200px;
+  width: 200px;
 }
 
 .fas {
@@ -49,8 +45,8 @@ body {
 .grid-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
 }
 
 ul.news-list li {
@@ -59,7 +55,7 @@ ul.news-list li {
 }
 
 div.container-fluid.py-2 {
-  height: 100px;
+  height: 200px;
   color: black;
   border-bottom: 2px solids blue;
 }
@@ -68,9 +64,21 @@ a.navbar-brand {
   margin-bottom: 300px;
 }
 
+div.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .container {
   /* background-color: #fff; */
-  margin: 150px auto;
+  margin: 0;
   border-radius: 20px;
   padding-bottom: 0px;
   padding-top: 0px;
@@ -99,9 +107,20 @@ a.navbar-brand {
   border-radius: %;
 }
 
+label p {
+  margin-bottom: 5px;
+  margin-right: 55px;
+}
+
 label,
 form.search {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .submit {
@@ -110,13 +129,10 @@ form.search {
   color: #fff;
 }
 
-div.row {
-  margin: 0;
-}
-
 div.container {
   padding-right: 0;
   position: relative;
+  display: inline;
 }
 
 footer {
@@ -128,6 +144,60 @@ footer {
 
 footer p {
   color: blue;
+}
+
+div.carousel-item.active {
+  height: 50%;
+}
+
+.carousel-control-prev,
+.carousel-item-next {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    -webkit-transform: translateX(-25%);
+            transform: translateX(-25%);
+  }
 }
 
 /* meditation app */
@@ -398,7 +468,7 @@ div.vid-container {
   text-align: center;
   color: aliceblue;
 } */
-button.btn {
+button.btns {
   background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
   background: linear-gradient(#2f96a3, #303e8f);
   color: white;
