@@ -11,35 +11,42 @@ body {
 }
 
 /* navbar */
+.navbar {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .logo {
   font-family: "Aladin", cursive;
-  color: black;
+  color: blue;
   font-size: 36px;
   width: 200px;
+  display: block;
+}
+
+.tvList {
+  border: 2px solid blue;
+  display: block;
+  padding-left: 60px;
+}
+
+.ww {
+  color: blue;
+}
+
+div.row {
+  padding-right: 15px;
 }
 
 .fas {
   height: 30px;
 }
 
-.ui-menu-item div.ui-state-active {
-  /* border: 2px solid blue; */
-  width: 120px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.carousel-item {
-  height: 300px;
-}
-
 .item img {
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
   top: 0;
   left: 0;
-  min-height: 300px;
 }
 
 .grid-container {
@@ -91,12 +98,11 @@ div.card {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  border-radius: %;
 }
 
 .newsdiv {
-  color: white;
-  background-color: #508cee;
+  color: black;
+  background-color: white;
   width: 300px;
   display: inline-block;
   margin: 0;
@@ -104,7 +110,6 @@ div.card {
   -webkit-box-shadow: 4px 10px #888888;
           box-shadow: 4px 10px #888888;
   padding: 20px;
-  border-radius: %;
 }
 
 label p {
@@ -137,203 +142,13 @@ div.container {
 
 footer {
   text-align: center;
-  color: white;
+  color: #1b5eee;
   width: 100%;
   height: 150px;
 }
 
 footer p {
   color: blue;
-}
-
-div.carousel-item.active {
-  height: 50%;
-}
-
-.carousel-control-prev,
-.carousel-item-next {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (max-width: 767px) {
-  .carousel-inner .carousel-item > div {
-    display: none;
-  }
-  .carousel-inner .carousel-item > div:first-child {
-    display: block;
-  }
-}
-
-/* medium and up screens */
-@media (min-width: 768px) {
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
-    -webkit-transform: translateX(25%);
-            transform: translateX(25%);
-  }
-  .carousel-inner .carousel-item-start.active,
-  .carousel-inner .carousel-item-prev {
-    -webkit-transform: translateX(-25%);
-            transform: translateX(-25%);
-  }
-}
-
-/* meditation app */
-div.app {
-  margin-top: 60px;
-  margin-bottom: 60px;
-  /* background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143)); */
-  z-index: -5;
-  /* margin-left: auto;
-  margin-right: auto; */
-}
-
-h3.time-display {
-  height: 30px;
-  width: 50px;
-}
-
-img.play {
-  width: 30px;
-  height: 30px;
-}
-
-.app {
-  /* margin-left: auto;
-  margin-right: auto; */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.time-select,
-.sound-picker,
-.player-container {
-  height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.player-container {
-  position: relative;
-}
-
-.player-container svg {
-  position: absolute;
-  height: 25%;
-  top: 25%;
-  left: 25%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.time-display {
-  margin-bottom: 20px;
-  position: absolute;
-  bottom: 0%;
-  color: white;
-  font-size: 20px;
-}
-
-video {
-  /* position: fixed; */
-  width: 250px;
-  height: 150px;
-  z-index: -1;
-}
-
-div.vid-container {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.time-select button,
-.sound-picker button {
-  color: gray;
-  width: 25%;
-  height: 10%;
-  background-color: white;
-  /* background: none; */
-  /* border: 2px solid white; */
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 10px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  z-index: 2;
-}
-
-.time-select button:hover {
-  color: black;
-  background: white;
-}
-
-.sound-picker button {
-  border: none;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  padding: 15px;
-}
-
-.sound-picker button:nth-child(1) {
-  background: #4972a1;
-}
-
-.sound-picker button:nth-child(2) {
-  background: yellow;
-}
-
-.sound-picker button img {
-  height: 100%;
 }
 
 @media (max-width: 760px) {
@@ -367,16 +182,6 @@ div.vid-container {
   div.container {
     margin: 0;
     padding: 0;
-  }
-  .carousel-item {
-    height: 100px;
-  }
-  .sound-picker button {
-    border: none;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    padding: 15px;
   }
 }
 
@@ -509,32 +314,134 @@ button#btn {
   color: white;
 }
 
-/* .sb-example-1 .search {
-  width: 100%;
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 280px;
+  --card-height: 350px;
+  --carousel-min-width: 600px;
+  z-index: 1;
   position: relative;
-  display: flex;
-}
-.sb-example-1 .searchTerm {
   width: 100%;
-  border: 3px solid #00b4cc;
-  border-right: none;
-  padding: 5px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9dbfaf;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
 }
-.sb-example-1 .searchTerm:focus {
-  color: #00b4cc;
+
+@media screen and (max-width: 740px) {
+  div.card-carousel {
+    margin-top: 100px;
+    margin-left: calc((100vw - var(--carousel-min-width) - 45px) / 2);
+  }
+  .card-carousel.smooth-return {
+    display: block;
+    margin: 0;
+  }
 }
-.sb-example-1 .searchButton {
-  width: 40px;
-  height: 50px;
-  border: 1px solid #00b4cc;
-  background: #00b4cc;
+
+.card-carousel.smooth-return {
+  margin: 0;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: 200px;
+  max-width: 300px;
   text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
-} */
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: inherit;
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card.highlight {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.card:nth-of-type(1) .image-container {
+  background-image: url("https://toriavey.com/images/2011/02/TOA20_03-740x740.jpg");
+}
+
+.card:nth-of-type(2) .image-container {
+  background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/01/Baked-Salmon-9.jpg");
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/04/Paleo-Pancakes-16.jpg");
+}
+
+.card:nth-of-type(4) .image-container {
+  background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/07/Stuffed-Peppers-3.jpg");
+}
+
+.card:nth-of-type(5) .image-container {
+  background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Falafel-12.jpg");
+}
+
+.image-container {
+  width: 9em;
+  height: 9em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+}
+
+.image-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 120%;
+  border: solid 3px rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(-10% - 3px);
+  left: calc(-10% - 3px);
+}
+
+h2 {
+  padding: 1em;
+  margin-top: 1em;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  border-radius: 0.2em;
+  display: inline-block;
+  -webkit-transform: translateX(calc((100vw - 100%) / 2));
+          transform: translateX(calc((100vw - 100%) / 2));
+}
+
+h2 a {
+  color: #f5b916;
+}
 /*# sourceMappingURL=style.css.map */
