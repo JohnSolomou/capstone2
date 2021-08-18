@@ -269,9 +269,11 @@ button.btns {
   margin-left: 90px;
   justify-content: center;
 }
+
 .news-list li {
   display: flex;
 }
+
 button#btn {
   display: flex;
   color: white;
@@ -284,126 +286,21 @@ button#btn {
   align-items: center;
   font-size: 22px;
   background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+  border-style: none;
+  border-width: 0;
 }
+// to get border off
+*:focus {
+  outline: 0 !important;
+}
+
 #output {
   margin: 25px;
   font-size: 16px;
   color: white;
 }
 // carousel
-// .card-carousel {
-//   --card-width: 80%;
-//   --card-max-width: 280px;
-//   --card-height: 350px;
-//   --carousel-min-width: 600px;
-//   z-index: 1;
-//   position: relative;
-//   // margin: 0 auto;
-//   width: 100%;
-//   height: var(--card-height);
-//   min-width: var(--carousel-min-width);
-//   transition: filter 0.3s ease;
-// }
-
-// @media screen and (max-width: 740px) {
-//   div.card-carousel {
-//     margin-top: 100px;
-//     margin-left: calc((100vw - var(--carousel-min-width) - 45px) / 2);
-//   }
-//   .card-carousel.smooth-return {
-//     margin: 0;
-//   }
-// }
-
-// .card-carousel.smooth-return {
-//   margin: 0;
-//   transition: all 0.2s ease;
-// }
-
-// .card-carousel .card {
-//   background: whitesmoke;
-//   width: 200px;
-//   max-width: 300px;
-//   text-align: center;
-//   padding: 1em;
-//   min-width: 250px;
-//   height: var(--card-height);
-//   position: absolute;
-//   margin: 0 auto;
-//   color: rgba(0, 0, 0, 0.5);
-//   transition: inherit;
-//   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
-//   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
-//   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
-//   border-radius: 1em;
-//   filter: brightness(0.9);
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .card.highlight {
-//   filter: brightness(1);
-// }
-
-// .card:nth-of-type(1) .image-container {
-//   background-image: url("https://toriavey.com/images/2011/02/TOA20_03-740x740.jpg");
-// }
-
-// .card:nth-of-type(2) .image-container {
-//   background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/01/Baked-Salmon-9.jpg");
-// }
-
-// .card:nth-of-type(3) .image-container {
-//   background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/04/Paleo-Pancakes-16.jpg");
-// }
-// .card:nth-of-type(4) .image-container {
-//   background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/07/Stuffed-Peppers-3.jpg");
-// }
-// .card:nth-of-type(5) .image-container {
-//   background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Falafel-12.jpg");
-// }
-
-// .image-container {
-//   width: 9em;
-//   height: 9em;
-//   position: relative;
-//   background-size: cover;
-//   margin-bottom: 2em;
-//   border-radius: 100%;
-//   padding: 1em;
-//   -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
-//   -moz-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
-//   box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
-// }
-
-// .image-container::after {
-//   content: "";
-//   display: block;
-//   width: 120%;
-//   height: 120%;
-//   border: solid 3px rgba(0, 0, 0, 0.1);
-//   border-radius: 100%;
-//   position: absolute;
-//   top: calc(-10% - 3px);
-//   left: calc(-10% - 3px);
-// }
-
-// h2 {
-//   padding: 1em;
-//   margin-top: 1em;
-//   background: rgba(0, 0, 0, 0.3);
-//   text-align: center;
-//   color: white;
-//   border-radius: 0.2em;
-//   display: inline-block;
-//   transform: translateX(calc((100vw - 100%) / 2));
-// }
-
-// h2 a {
-//   color: #f5b916;
-// }
+//
 .cards-wrapper {
   display: flex;
   justify-content: center;
@@ -435,5 +332,6 @@ button#btn {
 @media (min-width: 768px) {
   .card img {
     height: 11em;
+    width: 11em;
   }
 }

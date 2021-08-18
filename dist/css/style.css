@@ -100,9 +100,9 @@ div.card {
   display: block;
 }
 
-.newsdiv {
+div.newsdiv {
   color: black;
-  background-color: white;
+  background-color: #aa81f6;
   width: 300px;
   display: inline-block;
   margin: 0;
@@ -310,6 +310,12 @@ button#btn {
   font-size: 22px;
   background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
   background: linear-gradient(#2f96a3, #303e8f);
+  border-style: none;
+  border-width: 0;
+}
+
+*:focus {
+  outline: 0 !important;
 }
 
 #output {
@@ -360,6 +366,7 @@ button#btn {
 @media (min-width: 768px) {
   .card img {
     height: 11em;
+    width: 11em;
   }
 }
 /*# sourceMappingURL=style.css.map */
