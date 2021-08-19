@@ -7,6 +7,10 @@ $primary-color: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
   // font-family: "Rimouski";
   list-style: none;
 }
+// to get border off
+*:focus {
+  outline: 0 !important;
+}
 
 body {
   overflow-x: hidden;
@@ -288,10 +292,6 @@ button#btn {
   background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
   border-style: none;
   border-width: 0;
-}
-// to get border off
-*:focus {
-  outline: 0 !important;
 }
 
 #output {

@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+*:focus {
+  outline: 0 !important;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -312,10 +316,6 @@ button#btn {
   background: linear-gradient(#2f96a3, #303e8f);
   border-style: none;
   border-width: 0;
-}
-
-*:focus {
-  outline: 0 !important;
 }
 
 #output {
