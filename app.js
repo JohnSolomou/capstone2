@@ -92,25 +92,12 @@ tempElement.addEventListener("click", function () {
 const submit = document.querySelector(".submit");
 const input = document.querySelector(".input");
 const newsList = document.querySelector(".news-list");
-let topic = "";
 
-newsList.innerHTML = "";
+window.onload = async () => {
+  await submitData("");
+};
 
-const apiKey = "9051922ae5d94903aa4c1ad16d25086d";
-// let topic = input.value;
-
-async function retrieve(topic) {
-  let url = `https://api.spoonacular.com/recipes/complexSearch?query=${topic}&apiKey=${apiKey}&cuisine=&fillIngredients=false&addRecipeInformation=true&maxReadyTime=120&ignorePantry=flase&number=20&intolerances=gluten&sourceUrl=http://www.foodista.com`;
-
-  const response = await fetch(url);
-  const recipe = await response.json();
-  return recipe;
-}
-
-submit.addEventListener("click", async (e) => {
-  topic = input.value;
-  console.log(input.value);
-  e.preventDefault();
+async function submitData(topic) {
   var data = await retrieve(topic);
 
   data.results.forEach((results) => {
@@ -140,6 +127,29 @@ submit.addEventListener("click", async (e) => {
     a.appendChild(btn);
     newsList.appendChild(li);
   });
+}
+
+let topic = "";
+
+newsList.innerHTML = "";
+
+const apiKey = "9051922ae5d94903aa4c1ad16d25086d";
+// let topic = input.value;
+
+async function retrieve(topic) {
+  let url = `https://api.spoonacular.com/recipes/complexSearch?query=${topic}&apiKey=${apiKey}&cuisine=&fillIngredients=false&addRecipeInformation=true&maxReadyTime=120&ignorePantry=flase&number=20&intolerances=gluten&sourceUrl=http://www.foodista.com`;
+
+  const response = await fetch(url);
+  const recipe = await response.json();
+  return recipe;
+}
+
+submit.addEventListener("click", async (e) => {
+  topic = input.value;
+  console.log(input.value);
+  e.preventDefault();
+  $(".news-list").empty();
+  await submitData(topic);
 });
 
 // jquery for autocomplete
