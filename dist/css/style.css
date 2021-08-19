@@ -173,7 +173,7 @@ footer p {
   ul.news-list.grid-container {
     display: block;
     padding: 0;
-    padding-left: 15px;
+    padding-left: 0px;
   }
   .grid-container {
     display: -ms-grid;
@@ -365,8 +365,8 @@ button#btn {
 
 @media (min-width: 768px) {
   .card img {
-    height: 11em;
-    width: 11em;
+    height: 14em;
+    width: 15em;
   }
 }
 /*# sourceMappingURL=style.css.map */
