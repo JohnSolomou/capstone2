@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   list-style: none;
 }
 
@@ -17,8 +17,8 @@ body {
 /* navbar */
 .navbar {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-bottom: 2px solid blue;
 }
 
@@ -59,7 +59,7 @@ div.row {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
 }
 
 ul.news-list li {
@@ -81,11 +81,11 @@ div.card {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .container {
@@ -113,7 +113,7 @@ div.newsdiv {
   margin: 0;
   border: 1px solid gray;
   -webkit-box-shadow: 4px 10px #888888;
-          box-shadow: 4px 10px #888888;
+  box-shadow: 4px 10px #888888;
   padding: 20px;
 }
 
@@ -129,12 +129,18 @@ form.search {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .submit {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#2f96a3),
+    to(#303e8f)
+  );
   background: linear-gradient(#2f96a3, #303e8f);
   color: #fff;
 }
@@ -180,7 +186,7 @@ footer p {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
+    grid-template-columns: auto auto;
   }
   div.row {
     margin-right: 10px;
@@ -226,7 +232,13 @@ footer p {
   margin-right: auto;
   border-radius: 15%;
   /* background-color: #f4f9ff; */
-  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#2f96a3),
+    to(#303e8f)
+  );
   background: linear-gradient(#2f96a3, #303e8f);
 }
 
@@ -283,13 +295,19 @@ footer p {
   color: aliceblue;
 } */
 button.btns {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#2f96a3),
+    to(#303e8f)
+  );
   background: linear-gradient(#2f96a3, #303e8f);
   color: white;
   margin-left: 90px;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .news-list li {
@@ -310,10 +328,16 @@ button#btn {
   height: 300px;
   width: auto;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 22px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#2f96a3),
+    to(#303e8f)
+  );
   background: linear-gradient(#2f96a3, #303e8f);
   border-style: none;
   border-width: 0;
@@ -330,8 +354,8 @@ button#btn {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .card img {
@@ -342,7 +366,7 @@ button#btn {
 .card {
   margin: 0 0.5em;
   -webkit-box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
-          box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
   border: none;
   border-radius: 0;
 }
@@ -361,7 +385,7 @@ button#btn {
   border-radius: 50%;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (min-width: 768px) {
@@ -371,3 +395,134 @@ button#btn {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+// carousel css
+
+.visuallyhidden {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  opacity: 0;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 1em;
+}
+
+.container {
+  /* overflow: hidden; */
+  padding: 20px;
+  margin-top: 2em;
+  /* background: rgba(0, 0, 0, 0.1); */
+}
+
+.card-carousel {
+  --card-width: 80%;
+  --card-max-width: 280px;
+  --card-height: 350px;
+  --carousel-min-width: 600px;
+  z-index: 1;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: var(--card-height);
+  min-width: var(--carousel-min-width);
+  transition: filter 0.3s ease;
+}
+
+@media screen and (max-width: 640px) {
+  .card-carousel {
+    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
+  }
+}
+
+.card-carousel.smooth-return {
+  transition: all 0.2s ease;
+}
+
+.card-carousel .card {
+  background: whitesmoke;
+  width: var(--card-width);
+  max-width: var(--card-max-width);
+  text-align: center;
+  padding: 1em;
+  min-width: 250px;
+  height: var(--card-height);
+  position: absolute;
+  margin: 0 auto;
+  color: rgba(0, 0, 0, 0.5);
+  transition: inherit;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 1em;
+  filter: brightness(0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.highlight {
+  filter: brightness(1);
+}
+
+.card:nth-of-type(1) .image-container {
+  background-image: url("https://toriavey.com/images/2011/02/TOA20_03-740x740.jpg");
+}
+
+.card:nth-of-type(2) .image-container {
+  background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2021/01/Baked-Salmon-9.jpg");
+}
+
+.card:nth-of-type(3) .image-container {
+  background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/04/Paleo-Pancakes-16.jpg");
+}
+.card:nth-of-type(4) .image-container {
+  background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2020/07/Stuffed-Peppers-3.jpg");
+}
+.card:nth-of-type(5) .image-container {
+  background-image: url("https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2019/07/Falafel-12.jpg");
+}
+
+.image-container {
+  width: 8em;
+  height: 8em;
+  position: relative;
+  background-size: cover;
+  margin-bottom: 2em;
+  border-radius: 100%;
+  padding: 1em;
+  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
+}
+
+.image-container::after {
+  content: "";
+  display: block;
+  width: 120%;
+  height: 120%;
+  border: solid 3px rgba(0, 0, 0, 0.1);
+  border-radius: 100%;
+  position: absolute;
+  top: calc(-10% - 3px);
+  left: calc(-10% - 3px);
+}
+
+h2 {
+  padding: 1em;
+  margin-top: 1em;
+  background: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  border-radius: 0.2em;
+  display: inline-block;
+  transform: translateX(calc((100vw - 100%) / 2));
+}
+
+h2 a {
+  color: #f5b916;
+}
