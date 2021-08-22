@@ -1,5 +1,3 @@
-// api key :
-
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
 const descElement = document.querySelector(".temperature-description p");
@@ -302,12 +300,7 @@ const addList = (array, Element) => {
 const filteredArray = chefs.filter((name) => name.TVShow);
 addList(filteredArray, listOfTvShows);
 
-
-
-
-
 // carousel
-
 
 const cardsContainer = document.querySelector(".card-carousel");
 const cardsController = document.querySelector(
@@ -637,20 +630,6 @@ class CardCarousel extends DraggingEvent {
 }
 
 const carousel = new CardCarousel(cardsContainer);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // news feed
 
