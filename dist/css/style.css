@@ -136,10 +136,15 @@ form.search {
           justify-content: center;
 }
 
+button {
+  border-radius: 10%;
+}
+
 .submit {
   background: -webkit-gradient(linear, left top, left bottom, from(#2f96a3), to(#303e8f));
   background: linear-gradient(#2f96a3, #303e8f);
   color: #fff;
+  cursor: pointer;
 }
 
 div.container {
@@ -293,6 +298,8 @@ button.btns {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 10%;
+  cursor: pointer;
 }
 
 .news-list li {
@@ -320,6 +327,7 @@ button#btn {
   background: linear-gradient(#2f96a3, #303e8f);
   border-style: none;
   border-width: 0;
+  cursor: pointer;
 }
 
 #output {

@@ -7,10 +7,7 @@ $primary-color: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
 
   list-style: none;
 }
-html {
-  font-family: system-ui;
-  background: #3d76d9;
-}
+
 // to get border off
 *:focus {
   outline: 0 !important;
@@ -123,10 +120,14 @@ form.search {
   display: flex;
   justify-content: center;
 }
+button {
+  border-radius: ;
+}
 
 .submit {
   background: $primary-color;
   color: #fff;
+  cursor: pointer;
 }
 
 div.container {
@@ -275,6 +276,8 @@ button.btns {
   color: white;
   margin-left: 90px;
   justify-content: center;
+  border-radius: 10%;
+  cursor: pointer;
 }
 
 .news-list li {
@@ -295,6 +298,7 @@ button#btn {
   background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
   border-style: none;
   border-width: 0;
+  cursor: pointer;
 }
 
 #output {
